@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace exercicios
 {
@@ -7,6 +7,29 @@ namespace exercicios
         static void Main(string[] args)
         {
             /*
+            int n;
+            
+
+            Console.WriteLine(" Numero de entradas ");
+            n = int.Parse(Console.ReadLine());
+
+            string[] nome = new string[n];
+
+
+            for (int i=0;i<n;i++)
+            {
+
+                nome[i] = Console.ReadLine();
+            }
+            Console.WriteLine("Nomes lidos: ");
+            foreach (string x in nome)
+            {
+                
+                Console.WriteLine(x);
+            }
+            
+             ----------------------------------------------------------------------------
+            
             
             AREA DO RETANGULO
 
@@ -182,7 +205,7 @@ namespace exercicios
             }
             Console.WriteLine(soma);
 
-           
+           --------------------------------------------------
 
             float celsius, fahrenheit;
             fahrenheit = 0.0f;
@@ -201,6 +224,7 @@ namespace exercicios
                 escolha = Console.ReadLine();
             } while (escolha != "n");
 
+            --------------------------------------------------
              
 
             int n;
@@ -227,7 +251,7 @@ namespace exercicios
                 Console.WriteLine(a[i]);
             }
 
-            
+            ------------------------------------------
 
             int n;
 
@@ -271,7 +295,7 @@ namespace exercicios
             {
                 Console.WriteLine(b[i]);
             }
-            */
+            ------------------------------------------------------
 
             int n,contador;
             double soma,media;
@@ -314,9 +338,219 @@ namespace exercicios
             media = soma / contador;
             Console.WriteLine(" ");
             Console.Write("A media é "+ media+" a soma é "+soma);
+            
+
+    ----------------------------------------------------------------------
+
+            int n;
+            string[] entrada;
+            string[] nome;
+            int[] idade;
+            float[] altura;
+
+            float media;
+            media = 0.0f;
+            int contIdade;
+            contIdade = 0;
+
+            Console.WriteLine("Quantidade de Entradas: ");
+            n = int.Parse(Console.ReadLine());
+
+            nome = new string[n];
+            idade = new int[n];
+            altura = new float[n];
+            entrada = new string[n];
+
+
+            for (int i=0;i<n;i++) {
+
+                entrada = Console.ReadLine().Split(' ');
+                nome[i] = entrada[0];
+                idade[i] = int.Parse(entrada[1]);
+                altura[i] = float.Parse(entrada[2]);
+
+                if (idade[i] < 16)
+                {
+                    contIdade += 1;
+                }
+            }
+
+            for (int i = 0;i<n;i++)
+            {
+               media += altura[i];           
+            }
+           
+
+            Console.WriteLine("A media de altura é: "+(media/n));
+            double porcentagem;
+            porcentagem = (double) contIdade/n *100.0;
+            Console.WriteLine("Pessoas com menos de 16 anos: "+ porcentagem+"%");
+            
+
+---------------------------------------------------------
+            
+            int n;
+            int negativo = 0;
+
+            Console.WriteLine("Tamanho da Matriz Quadrada? ");
+            n = int.Parse(Console.ReadLine());
+            
+            int [,] a = new int [n,n];
+
+            for (int i = 0; i < n; i++)
+            {
+
+                string[] vetor = Console.ReadLine().Split(' ');
+                for (int j = 0; j < n; j++)
+                {
+
+                    a[i, j] = int.Parse(vetor[j]);
+                }
+            }
+
+            Console.Write("A diagonal principal é: ");
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+
+                   
+                    if (i == j){
+                        Console.Write(a[i, j]+" ");
+
+                    }
+                    if (a[i, j]<0)
+                    {
+
+                       
+                        negativo += 1;
+                    }
+                }
+               
+
+            }
+            Console.WriteLine();
+            Console.Write("A quantidade de Negativos é: " + negativo);
+
+    -----------------------------------------------------------
+            
+
+            int linha, coluna;
+            int soma = 0;
+
+            Console.WriteLine("Linha Coluna ");
+            string[] vetor = Console.ReadLine().Split(' ');
+
+            linha = int.Parse(vetor[0]);
+            coluna = int.Parse(vetor[1]);
+
+            int[,] a = new int[linha, coluna];
+            int[] vet = new int[linha];
+
+            for (int i = 0; i < linha; i++) {
+
+                string[] s = Console.ReadLine().Split(' ');
+                
+
+                for (int j=0;j<coluna;j++)
+                {
+
+                    a[i, j] = int.Parse(s[j]);
+                    soma += int.Parse(s[j]);
+
+                }
+
+                
+                vet[i] = soma;
+                soma = 0;
+                
+            }
+           for (int i=0;i<linha;i++)
+            {
+                Console.WriteLine("A soma da linha é "+vet[i]);
+            }
+           
+
+
+           --------------------------------------------
+            
+          string [] vetor;
+
+            vetor = Console.ReadLine().Split(' ');
+            string nome = vetor[0];
+            char sexo = char.Parse(vetor[1]);
+            int idade = int.Parse(vetor[2]);
+            double altura = double.Parse(vetor[3]);
+
+            Console.WriteLine(nome+""+sexo);
+            
+               
+            ----------------------------
+
+            Console.WriteLine("Digite os numeros: ");
+            int n1 = int.Parse(Console.ReadLine());
+            int n2 = int.Parse(Console.ReadLine());
+            int n3 = int.Parse(Console.ReadLine());
+      
+            maior(n1,n2,n3);
+
+           void maior(int a,int b, int c){
+                    
+               if (n1>n2 && n1>n3){
+
+                    Console.WriteLine("O maior é "+n1);
+               }
+               else if(n2>n1 && n2>n3){
+           
+                    Console.WriteLine("O maior é "+ n2);
+                }
+               else{
+            
+                Console.WriteLine("O maior é "+ n3);
+                }
+
+
+            }
+            ---------------------------------
+
+            
+          Console.WriteLine("Digite um numero: ");
+          int x = int.Parse(Console.ReadLine());
+
+            while (x>0){
+
+                Console.WriteLine(Math.Sqrt(x).ToString("F3"));
+                Console.WriteLine("Digite um numero: ");
+                x = int.Parse(Console.ReadLine());
+            
+                }
+            Console.WriteLine("Numero Negativo");
+
+            */
+            
+            Console.WriteLine("Quantos numeros inteiros você vai digitar?");
+            int x = int.Parse(Console.ReadLine());
+
+            int[]vetor = new int[x];
+            int soma = 0;
+
+            for (int i =0;i<x;i++){
+                Console.Write("Valor #"+(i+1)+":");
+                vetor[i]= int.Parse(Console.ReadLine());
+                soma += vetor[i];
+            }
+
+            Console.WriteLine("Soma = "+soma);
+
+
+
+
+
 
 
             Console.ReadLine();
+
+
 
         }
     }
