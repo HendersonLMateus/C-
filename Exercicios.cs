@@ -1,14 +1,106 @@
 using System;
 
-namespace exercicios
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace exercicios {
+
+    /*
+    class Triangulo {
+        public double A;
+        public double B;
+        public double C;
+
+        double CalculaArea() {
+            double p = (A + B + C) / 2;
+            return Math.Sqrt(p * (p - A) * (p - B) * (p - C));
+        }
+
+
+        class Retangulo{
+
+        public double Largura;
+        public double Altura;
+
+        public double Area(double x,double y){
+        
+            return x*y;
+        }
+
+        public double Perimetro(double x, double y){
+
+            return 2*x + 2*y;
+        }
+
+        public double Diagonal(double x,double y){
+
+            return Math.Sqrt(Math.Pow(x,2) + Math.Pow(y,2));
+        }
+
+        }
+        
+
+         class Funcionario {
+            public string Nome;
+            public double SalarioBruto;
+            public double Imposto;
+
+         public void AtualizaDados(){
+
+            Console.WriteLine("Funcionário: "+Nome+", R$"+(SalarioBruto-Imposto));
+         }
+
+         public double AumentaSalario(double x){
+            double a = SalarioBruto * (x/100); 
+            double b = SalarioBruto - Imposto;
+
+            return a + b;
+         }
+
+        }
+
+        class Aluno {
+
+           public string Nome;
+           public double[] Notas = new double[3];
+        
+
+            public void NotaFinal(double x, double y,double z) {
+
+             double a = x + y + z;
+             
+            if (a < 90) {
+                Console.WriteLine("NOTA FINAL = "+a);
+                Console.WriteLine("REPROVADO");
+                Console.WriteLine("FALTAM "+ (60-a)+" PONTOS");
+                }
+            else {
+                Console.WriteLine("NOTA FINAL ="+ a);
+                Console.WriteLine("APROVADO");
+            }
+                
+             }
+         }
+
+        */
+
+        class ConversorDeMoeda {
+
+        public static double IOF(double x,double y) {
+
+            double a = x * y;
+
+            return a + (0.06 * a);
+
+        }
+
+    }
+
+
+
+
+        class Program {
+            static void Main(string[] args) {
             /*
             int n;
-            
+
 
             Console.WriteLine(" Numero de entradas ");
             n = int.Parse(Console.ReadLine());
@@ -24,13 +116,13 @@ namespace exercicios
             Console.WriteLine("Nomes lidos: ");
             foreach (string x in nome)
             {
-                
+
                 Console.WriteLine(x);
             }
-            
+
              ----------------------------------------------------------------------------
-            
-            
+
+
             AREA DO RETANGULO
 
             float Base, altura, area, valor;
@@ -46,7 +138,7 @@ namespace exercicios
 
             Console.WriteLine("A area do terreno é de "+area+ " e o valor do Metro Quadrado é de "
                 + valor + ". Ou seja, o valor total do terreno é de " + (area*valor));
-            
+
             AREA DO CIRCULO
 
             float r,area;
@@ -57,7 +149,7 @@ namespace exercicios
 
             area = n * (r * r);
             Console.WriteLine("O valor da Area do circulo é de " + area + "com um raio de " + r );
-           
+
             ----------------------------------------------------------
 
             string nome1,nome2;
@@ -65,7 +157,7 @@ namespace exercicios
             string[] vetor;
             double media;
 
-        
+
 
             Console.WriteLine("Digite seu Primeiro Nome e sua Idade");
             vetor = Console.ReadLine().Split(' ');
@@ -79,7 +171,7 @@ namespace exercicios
             media = (double)(idade1 + idade2) / 2;
 
             Console.WriteLine("A idade media de "+ nome1+" e "+ nome2 + " é de " + media + " anos");
-             
+
 
             int x,horas,minutos,segundos;
 
@@ -90,7 +182,7 @@ namespace exercicios
             horas = x / 3600;
             minutos = (x % 3600)/60;
             segundos = x % 60;
-            
+
             Console.WriteLine(x +" tem "+ horas +" horas "+ minutos +" minutos " + segundos + " segundos");
 
 
@@ -131,8 +223,8 @@ namespace exercicios
             -----------------------------------------
 
             float x, soma,idade, media;
-            
-             
+
+
             x = 0;
             media = 0;
             soma = 0;
@@ -142,7 +234,7 @@ namespace exercicios
             while (idade >= 0)
             {
 
-               
+
                 soma += idade;
                 x = x + 1;
                 idade = float.Parse(Console.ReadLine());
@@ -162,7 +254,7 @@ namespace exercicios
             }
             ------------------------------------------
 
-            
+
 
             int x;
 
@@ -225,7 +317,7 @@ namespace exercicios
             } while (escolha != "n");
 
             --------------------------------------------------
-             
+
 
             int n;
 
@@ -241,13 +333,13 @@ namespace exercicios
             {
                 Console.WriteLine("Digite o valor a ser inserido no vetor: ");
                 a[i] = float.Parse(Console.ReadLine());
-               
+
             }
 
             Console.WriteLine("Os numeros no vetor são: ");
             for (int i = 0; i < n; i++)
             {
-               
+
                 Console.WriteLine(a[i]);
             }
 
@@ -338,7 +430,7 @@ namespace exercicios
             media = soma / contador;
             Console.WriteLine(" ");
             Console.Write("A media é "+ media+" a soma é "+soma);
-            
+
 
     ----------------------------------------------------------------------
 
@@ -379,22 +471,22 @@ namespace exercicios
             {
                media += altura[i];           
             }
-           
+
 
             Console.WriteLine("A media de altura é: "+(media/n));
             double porcentagem;
             porcentagem = (double) contIdade/n *100.0;
             Console.WriteLine("Pessoas com menos de 16 anos: "+ porcentagem+"%");
-            
+
 
 ---------------------------------------------------------
-            
+
             int n;
             int negativo = 0;
 
             Console.WriteLine("Tamanho da Matriz Quadrada? ");
             n = int.Parse(Console.ReadLine());
-            
+
             int [,] a = new int [n,n];
 
             for (int i = 0; i < n; i++)
@@ -414,7 +506,7 @@ namespace exercicios
                 for (int j = 0; j < n; j++)
                 {
 
-                   
+
                     if (i == j){
                         Console.Write(a[i, j]+" ");
 
@@ -422,18 +514,18 @@ namespace exercicios
                     if (a[i, j]<0)
                     {
 
-                       
+
                         negativo += 1;
                     }
                 }
-               
+
 
             }
             Console.WriteLine();
             Console.Write("A quantidade de Negativos é: " + negativo);
 
     -----------------------------------------------------------
-            
+
 
             int linha, coluna;
             int soma = 0;
@@ -450,7 +542,7 @@ namespace exercicios
             for (int i = 0; i < linha; i++) {
 
                 string[] s = Console.ReadLine().Split(' ');
-                
+
 
                 for (int j=0;j<coluna;j++)
                 {
@@ -460,20 +552,20 @@ namespace exercicios
 
                 }
 
-                
+
                 vet[i] = soma;
                 soma = 0;
-                
+
             }
            for (int i=0;i<linha;i++)
             {
                 Console.WriteLine("A soma da linha é "+vet[i]);
             }
-           
+
 
 
            --------------------------------------------
-            
+
           string [] vetor;
 
             vetor = Console.ReadLine().Split(' ');
@@ -483,29 +575,29 @@ namespace exercicios
             double altura = double.Parse(vetor[3]);
 
             Console.WriteLine(nome+""+sexo);
-            
-               
+
+
             ----------------------------
 
             Console.WriteLine("Digite os numeros: ");
             int n1 = int.Parse(Console.ReadLine());
             int n2 = int.Parse(Console.ReadLine());
             int n3 = int.Parse(Console.ReadLine());
-      
+
             maior(n1,n2,n3);
 
            void maior(int a,int b, int c){
-                    
+
                if (n1>n2 && n1>n3){
 
                     Console.WriteLine("O maior é "+n1);
                }
                else if(n2>n1 && n2>n3){
-           
+
                     Console.WriteLine("O maior é "+ n2);
                 }
                else{
-            
+
                 Console.WriteLine("O maior é "+ n3);
                 }
 
@@ -513,7 +605,7 @@ namespace exercicios
             }
             ---------------------------------
 
-            
+
           Console.WriteLine("Digite um numero: ");
           int x = int.Parse(Console.ReadLine());
 
@@ -522,12 +614,12 @@ namespace exercicios
                 Console.WriteLine(Math.Sqrt(x).ToString("F3"));
                 Console.WriteLine("Digite um numero: ");
                 x = int.Parse(Console.ReadLine());
-            
+
                 }
             Console.WriteLine("Numero Negativo");
 
-            */
-            
+            ------------------------------
+
             Console.WriteLine("Quantos numeros inteiros você vai digitar?");
             int x = int.Parse(Console.ReadLine());
 
@@ -542,16 +634,168 @@ namespace exercicios
 
             Console.WriteLine("Soma = "+soma);
 
+            ---------------------------------------------------
+
+            Pessoa x;
+            Pessoa y;
+
+            x = new Pessoa();
+            y = new Pessoa();
 
 
 
+            Console.WriteLine("Dados da primeira pessoa: ");
+
+            Console.Write("Nome: ");
+            x.Nome = Console.ReadLine();
+            Console.Write("Idade: ");
+            x.Idade = int.Parse(Console.ReadLine());            
+
+            Console.WriteLine("Dados da segunda pessoa: ");
+            Console.Write("Nome: " );
+            y.Nome = Console.ReadLine();
+            Console.Write("Idade: ");
+            y.Idade = int.Parse(Console.ReadLine());
+
+            ------------------------------------------
+
+            Pessoa f1,f2;
+
+            f1 = new Pessoa();
+            f2 = new Pessoa();
+
+            Console.WriteLine("Dados do primeiro funcionário: ");
+            Console.Write("Nome: ");
+            f1.Nome = Console.ReadLine();
+            Console.Write("Salario: ");
+            f1.Salario = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Dados do segundo funcionário: ");
+            Console.Write("Nome: ");
+            f2.Nome = Console.ReadLine();
+            Console.Write("Salario: ");
+            f2.Salario = double.Parse(Console.ReadLine());
+
+            double media = (f1.Salario + f2.Salario) / 2;
+            Console.WriteLine("Salario Medio: "+media);
+
+            --------------------------------------
+
+            Triangulo a, b;
+
+            a = new Triangulo();
+            b = new Triangulo();
 
 
+            Console.WriteLine("Medidas do Triangulo A");
+            a.A = double.Parse(Console.ReadLine());
+            a.B = double.Parse(Console.ReadLine());
+            a.C = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Medidas do Triangulo B");
+            b.A = double.Parse(Console.ReadLine());
+            b.B = double.Parse(Console.ReadLine());
+            b.C = double.Parse(Console.ReadLine());
+
+            double areaX = a.CalculaArea();
+
+            double areaY = b.CalculaArea();
+
+            Console.WriteLine("Area de X: " + areaX);
+            Console.WriteLine("Area de B: " + areaY.ToString("F4"));
+
+            if (areaX > areaY) {
+                Console.Write("Maior Area: X");
+            }
+            else {
+                Console.Write("Maior Area: Y ");
+            }
+
+            ---------------------------------------
+
+            Pessoa f1, f2;
+
+            f1 = new Pessoa();
+            f2 = new Pessoa();
+
+            Console.WriteLine("Dados do primeiro funcionário: ");
+            Console.Write("Nome: ");
+            f1.Nome = Console.ReadLine();
+            Console.Write("Salario: ");
+            f1.Salario = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Dados do segundo funcionário: ");
+            Console.Write("Nome: ");
+            f2.Nome = Console.ReadLine();
+            Console.Write("Salario: ");
+            f2.Salario = double.Parse(Console.ReadLine());
+
+            double media = (f1.Salario + f2.Salario) / 2;
+            Console.WriteLine("Salario Medio: " + media);
+
+
+           ---------------------------------------
+
+            Console.WriteLine("Digite a Largura e Altura do Retangulo: ");
+
+            Retangulo R = new Retangulo();
+
+            R.Largura = double.Parse(Console.ReadLine());
+            R.Altura = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Area = "+ R.Area(R.Altura,R.Largura));
+            Console.WriteLine("Perimetro = "+ R.Perimetro(R.Largura,R.Altura));
+            Console.WriteLine("Diagonal = "+ R.Diagonal(R.Altura,R.Largura));
+             -------------------------------------------------
+
+            Funcionario F = new Funcionario();
+            double x; 
+
+            Console.Write("Nome: ");
+            F.Nome = Console.ReadLine();
+            Console.Write("Salário Bruto: ");
+            F.SalarioBruto = double.Parse(Console.ReadLine());
+            Console.Write("Imposto: ");
+            F.Imposto = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("");
+            F.AtualizaDados();
+            Console.WriteLine(" ");
+
+            Console.Write("Digite a Porcentagem de Aumento do Salário: ");
+            x = double.Parse(Console.ReadLine());
+            double a = F.AumentaSalario(x);
+
+
+            Console.WriteLine("");
+            Console.WriteLine("Dados Atualizados: "+F.Nome+", R$"+a);       
+          
+            -----------------------------------
+
+            Aluno A = new Aluno();
+
+             Console.Write("Nome do Aluno: ");
+             A.Nome = Console.ReadLine();
+
+            Console.WriteLine("Digite as três Notas do Aluno: ");
+            for (int i=0; i<3;i++) {
+                A.Notas[i] = double.Parse(Console.ReadLine());
+            }
+
+            A.NotaFinal(A.Notas[0],A.Notas[1],A.Notas[2]);
+            
+              */
+
+            Console.Write("Qual é a cotação do dólar? ");
+            double dolar = double.Parse(Console.ReadLine());
+            Console.Write("Quantos dólares você vai comprar? ");
+            double real = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Valor a ser pago em reais = "+ConversorDeMoeda.IOF(real,dolar));
 
             Console.ReadLine();
-
-
-
         }
     }
 }
+
+
