@@ -1,4 +1,3 @@
-/// Lista de Funcionários com Id, Nome e Salário. Onde, ao fim, é solicitado um aumento no salário de um determinado funcionário.
 
 using System.Collections.Generic;
 using System;
