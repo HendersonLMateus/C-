@@ -227,6 +227,8 @@ namespace SistemaMoto {
             maiorMarchaDaMoto.Text = "";
             Ligado.Enabled = false;
             Desligado.Enabled = false;
+            Ligado.Checked = false;
+            Desligado.Checked = false;
             marchaMais.Enabled = false;
             marchaMenos.Enabled = false;
         }
