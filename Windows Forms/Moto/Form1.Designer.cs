@@ -1,4 +1,4 @@
-﻿namespace SistemaMoto {
+namespace SistemaMoto {
     partial class Form1 {
         /// <summary>
         /// Variável de designer necessária.
@@ -60,8 +60,12 @@
             this.marcaDaMotoca = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.criarNovaMotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -89,7 +93,7 @@
             this.groupBox1.Controls.Add(this.marcaDaMoto);
             this.groupBox1.Controls.Add(this.b);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 39);
+            this.groupBox1.Location = new System.Drawing.Point(9, 36);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(243, 304);
             this.groupBox1.TabIndex = 1;
@@ -189,7 +193,7 @@
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(75, 23);
             this.buttonSubmit.TabIndex = 7;
-            this.buttonSubmit.Text = "Submit";
+            this.buttonSubmit.Text = "Enviar";
             this.buttonSubmit.UseVisualStyleBackColor = true;
             this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
@@ -260,7 +264,7 @@
             this.groupBox2.Controls.Add(this.marcaDaMotoca);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Location = new System.Drawing.Point(279, 41);
+            this.groupBox2.Location = new System.Drawing.Point(276, 36);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(512, 497);
             this.groupBox2.TabIndex = 20;
@@ -452,20 +456,54 @@
             this.label11.Size = new System.Drawing.Size(0, 13);
             this.label11.TabIndex = 0;
             // 
+            // menuStrip2
+            // 
+            this.menuStrip2.BackColor = System.Drawing.Color.White;
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novoToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(933, 24);
+            this.menuStrip2.TabIndex = 22;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // novoToolStripMenuItem
+            // 
+            this.novoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.criarNovaMotoToolStripMenuItem});
+            this.novoToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
+            this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.novoToolStripMenuItem.Text = "Novo";
+            // 
+            // criarNovaMotoToolStripMenuItem
+            // 
+            this.criarNovaMotoToolStripMenuItem.Name = "criarNovaMotoToolStripMenuItem";
+            this.criarNovaMotoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.criarNovaMotoToolStripMenuItem.Text = "Criar Nova Moto";
+            this.criarNovaMotoToolStripMenuItem.Click += new System.EventHandler(this.criarNovaMotoToolStripMenuItem_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(933, 654);
+            this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Sistema Moto";
+            this.TransparencyKey = System.Drawing.Color.WhiteSmoke;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -508,6 +546,9 @@
         private System.Windows.Forms.Button marchaMenos;
         private System.Windows.Forms.Button marchaMais;
         private System.Windows.Forms.Label marchaDaMotoca;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem novoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem criarNovaMotoToolStripMenuItem;
     }
 }
 
