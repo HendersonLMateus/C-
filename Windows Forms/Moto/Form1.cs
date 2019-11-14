@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace SistemaMoto {
     public partial class Form1 : Form {
         public Form1() {
             InitializeComponent();
         }
+
+        
 
         Moto Motoca = new Moto();
 
@@ -41,12 +44,25 @@ namespace SistemaMoto {
             marchaMais.Enabled = true;
             marchaMenos.Enabled = true;
 
-            MessageBox.Show("A "+nomeDaMoto.Text+" está pronta para RODAR!!");
+            MessageBox.Show("A " + nomeDaMoto.Text + " está pronta para RODAR!!");
+
+            //Deixa os campos em Branco apos enviar
+
+            nomeDaMoto.Text = "";
+            marcaDaMoto.Text = "";
+            modeloDaMoto.Text = "";
+            corDaMoto.Text = "";
+            menorMarchaDaMoto.Text = "";
+            maiorMarchaDaMoto.Text = "";
+
+
+
+            
         }
 
         private void Desligado_CheckedChanged(object sender, EventArgs e) {
             if (Desligado.Checked == true) {
-                MessageBox.Show("A " + nomeDaMoto.Text + " está desligada!");
+                MessageBox.Show("A " + nomeDaMotoca.Text + " está desligada!");
                 Motoca.MarchaAtual = 0;
                 marchaDaMotoca.Text = "0";
             }
@@ -54,7 +70,7 @@ namespace SistemaMoto {
 
         private void Ligado_CheckedChanged(object sender, EventArgs e) {
                 if (Ligado.Checked == true) {
-                    MessageBox.Show("A " + nomeDaMoto.Text + " está ligada!");
+                    MessageBox.Show("A " + nomeDaMotoca.Text + " está ligada!");
                 }                  
         }
 
@@ -72,7 +88,7 @@ namespace SistemaMoto {
                 }
             }
             else {
-                MessageBox.Show("Ligue a "+nomeDaMoto.Text);
+                MessageBox.Show("Ligue a "+nomeDaMotoca.Text);
             }
            
         }
@@ -90,7 +106,7 @@ namespace SistemaMoto {
                 }
             }
             else {
-                MessageBox.Show("Ligue a " + nomeDaMoto.Text);
+                MessageBox.Show("Ligue a " + nomeDaMotoca.Text);
             }
 
 
@@ -188,6 +204,31 @@ namespace SistemaMoto {
 
         private void quadrado_TextChanged(object sender, EventArgs e) {
 
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) {
+
+        }
+ 
+
+        private void criarNovaMotoToolStripMenuItem_Click_1(object sender, EventArgs e) {
+            nomeDaMotoca.Text = " ";
+            marcaDaMotoca.Text = "";
+            modeloDaMotoca.Text = "";
+            corDaMotoca.Text = "";
+            menorMarchaDaMotoca.Text = "";
+            maiorMarchaDaMotoca.Text = "";
+            marchaDaMotoca.Text = "";
+            nomeDaMoto.Text = "";
+            marcaDaMoto.Text = "";
+            modeloDaMoto.Text = "";
+            corDaMoto.Text = "";
+            menorMarchaDaMoto.Text = "";
+            maiorMarchaDaMoto.Text = "";
+            Ligado.Enabled = false;
+            Desligado.Enabled = false;
+            marchaMais.Enabled = false;
+            marchaMenos.Enabled = false;
         }
     }
 }
