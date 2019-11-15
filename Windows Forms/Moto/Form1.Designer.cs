@@ -63,6 +63,7 @@
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.criarNovaMotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -125,14 +126,14 @@
             this.maiorMarchaDaMoto.Location = new System.Drawing.Point(118, 180);
             this.maiorMarchaDaMoto.Name = "maiorMarchaDaMoto";
             this.maiorMarchaDaMoto.Size = new System.Drawing.Size(100, 20);
-            this.maiorMarchaDaMoto.TabIndex = 17;
+            this.maiorMarchaDaMoto.TabIndex = 6;
             // 
             // menorMarchaDaMoto
             // 
             this.menorMarchaDaMoto.Location = new System.Drawing.Point(118, 154);
             this.menorMarchaDaMoto.Name = "menorMarchaDaMoto";
             this.menorMarchaDaMoto.Size = new System.Drawing.Size(100, 20);
-            this.menorMarchaDaMoto.TabIndex = 16;
+            this.menorMarchaDaMoto.TabIndex = 5;
             // 
             // a
             // 
@@ -149,7 +150,7 @@
             this.nomeDaMoto.Location = new System.Drawing.Point(118, 50);
             this.nomeDaMoto.Name = "nomeDaMoto";
             this.nomeDaMoto.Size = new System.Drawing.Size(100, 20);
-            this.nomeDaMoto.TabIndex = 14;
+            this.nomeDaMoto.TabIndex = 1;
             this.nomeDaMoto.TextChanged += new System.EventHandler(this.nomeDaMoto_TextChanged);
             // 
             // corDaMoto
@@ -157,14 +158,14 @@
             this.corDaMoto.Location = new System.Drawing.Point(118, 128);
             this.corDaMoto.Name = "corDaMoto";
             this.corDaMoto.Size = new System.Drawing.Size(100, 20);
-            this.corDaMoto.TabIndex = 12;
+            this.corDaMoto.TabIndex = 4;
             // 
             // modeloDaMoto
             // 
             this.modeloDaMoto.Location = new System.Drawing.Point(118, 102);
             this.modeloDaMoto.Name = "modeloDaMoto";
             this.modeloDaMoto.Size = new System.Drawing.Size(100, 20);
-            this.modeloDaMoto.TabIndex = 11;
+            this.modeloDaMoto.TabIndex = 3;
             this.modeloDaMoto.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // d
@@ -202,7 +203,7 @@
             this.marcaDaMoto.Location = new System.Drawing.Point(118, 76);
             this.marcaDaMoto.Name = "marcaDaMoto";
             this.marcaDaMoto.Size = new System.Drawing.Size(100, 20);
-            this.marcaDaMoto.TabIndex = 4;
+            this.marcaDaMoto.TabIndex = 2;
             this.marcaDaMoto.TextChanged += new System.EventHandler(this.marcaDaMoto_TextChanged);
             // 
             // b
@@ -222,7 +223,7 @@
             this.Desligado.Location = new System.Drawing.Point(395, 81);
             this.Desligado.Name = "Desligado";
             this.Desligado.Size = new System.Drawing.Size(72, 17);
-            this.Desligado.TabIndex = 3;
+            this.Desligado.TabIndex = 9;
             this.Desligado.TabStop = true;
             this.Desligado.Text = "Desligado";
             this.Desligado.UseVisualStyleBackColor = true;
@@ -235,7 +236,7 @@
             this.Ligado.Location = new System.Drawing.Point(332, 81);
             this.Ligado.Name = "Ligado";
             this.Ligado.Size = new System.Drawing.Size(57, 17);
-            this.Ligado.TabIndex = 4;
+            this.Ligado.TabIndex = 8;
             this.Ligado.TabStop = true;
             this.Ligado.Text = "Ligado";
             this.Ligado.UseVisualStyleBackColor = true;
@@ -289,7 +290,7 @@
             this.marchaMenos.Location = new System.Drawing.Point(413, 213);
             this.marchaMenos.Name = "marchaMenos";
             this.marchaMenos.Size = new System.Drawing.Size(75, 23);
-            this.marchaMenos.TabIndex = 31;
+            this.marchaMenos.TabIndex = 11;
             this.marchaMenos.Text = "-";
             this.marchaMenos.UseVisualStyleBackColor = true;
             this.marchaMenos.Click += new System.EventHandler(this.button2_Click);
@@ -301,7 +302,7 @@
             this.marchaMais.Location = new System.Drawing.Point(332, 213);
             this.marchaMais.Name = "marchaMais";
             this.marchaMais.Size = new System.Drawing.Size(75, 23);
-            this.marchaMais.TabIndex = 20;
+            this.marchaMais.TabIndex = 10;
             this.marchaMais.Text = "+";
             this.marchaMais.UseVisualStyleBackColor = true;
             this.marchaMais.Click += new System.EventHandler(this.button1_Click);
@@ -460,7 +461,8 @@
             // 
             this.menuStrip2.BackColor = System.Drawing.Color.White;
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.novoToolStripMenuItem});
+            this.novoToolStripMenuItem,
+            this.sobreToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(933, 24);
@@ -479,9 +481,16 @@
             // criarNovaMotoToolStripMenuItem
             // 
             this.criarNovaMotoToolStripMenuItem.Name = "criarNovaMotoToolStripMenuItem";
-            this.criarNovaMotoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.criarNovaMotoToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.criarNovaMotoToolStripMenuItem.Text = "Criar Nova Moto";
             this.criarNovaMotoToolStripMenuItem.Click += new System.EventHandler(this.criarNovaMotoToolStripMenuItem_Click_1);
+            // 
+            // sobreToolStripMenuItem
+            // 
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.sobreToolStripMenuItem.Text = "Sobre";
+            this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -495,7 +504,7 @@
             this.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.Name = "Form1";
             this.Text = "Sistema Moto";
-            this.TransparencyKey = System.Drawing.Color.WhiteSmoke;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -549,6 +558,7 @@
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem novoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem criarNovaMotoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
     }
 }
 

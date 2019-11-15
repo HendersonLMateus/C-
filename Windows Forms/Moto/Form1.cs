@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Login;
 
 
 namespace SistemaMoto {
@@ -15,49 +16,76 @@ namespace SistemaMoto {
             InitializeComponent();
         }
 
-        
+
 
         Moto Motoca = new Moto();
 
         private void buttonSubmit_Click(object sender, EventArgs e) {
 
 
+          
 
-            
             int menor = int.Parse(menorMarchaDaMoto.Text);
             int maior = int.Parse(maiorMarchaDaMoto.Text);
-            
 
-            Moto Motoca = new Moto(marcaDaMoto.Text,modeloDaMoto.Text,corDaMoto.Text,menor,maior);
+            if (menor > maior) {
 
-            //Informações da Moto
 
-            nomeDaMotoca.Text = nomeDaMoto.Text;
-            marcaDaMotoca.Text = Motoca.Marca;
-            modeloDaMotoca.Text = Motoca.Modelo;
-            corDaMotoca.Text = Motoca.Cor;        
-            menorMarchaDaMotoca.Text = Convert.ToString(menor); 
-            maiorMarchaDaMotoca.Text = Convert.ToString(maior);
-            marchaDaMotoca.Text = Convert.ToString(Motoca.MarchaAtual);
-            Ligado.Enabled = true;
-            Desligado.Enabled = true;
-            marchaMais.Enabled = true;
-            marchaMenos.Enabled = true;
+                MessageBox.Show("Confira as Marchas Novamente!");
 
-            MessageBox.Show("A " + nomeDaMoto.Text + " está pronta para RODAR!!");
-
-            //Deixa os campos em Branco apos enviar
-
-            nomeDaMoto.Text = "";
-            marcaDaMoto.Text = "";
-            modeloDaMoto.Text = "";
-            corDaMoto.Text = "";
-            menorMarchaDaMoto.Text = "";
-            maiorMarchaDaMoto.Text = "";
+            }
+            else {
 
 
 
-            
+
+
+                Moto Motoca = new Moto(marcaDaMoto.Text, modeloDaMoto.Text, corDaMoto.Text, menor, maior);
+
+                //Informações da Moto
+
+
+
+                nomeDaMotoca.Text = nomeDaMoto.Text;
+                marcaDaMotoca.Text = Motoca.Marca;
+                modeloDaMotoca.Text = Motoca.Modelo;
+
+                corDaMotoca.Text = Motoca.Cor;
+                menorMarchaDaMotoca.Text = Convert.ToString(menor);
+                Motoca.MarchaAtual = menor;
+
+                maiorMarchaDaMotoca.Text = Convert.ToString(maior);
+                marchaDaMotoca.Text = Convert.ToString(Motoca.MarchaAtual);
+                Ligado.Enabled = true;
+
+                Desligado.Enabled = true;
+                marchaMais.Enabled = true;
+                marchaMenos.Enabled = true;
+
+
+
+
+                MessageBox.Show("A " + nomeDaMoto.Text + " está pronta para RODAR!!");
+
+                //Deixa os campos em Branco apos enviar
+
+                 nomeDaMoto.Text = "";
+                 marcaDaMoto.Text = "";
+                 modeloDaMoto.Text = "";
+                 corDaMoto.Text = "";
+                 menorMarchaDaMoto.Text = "";
+                 maiorMarchaDaMoto.Text = "";
+
+
+            }
+
+        }
+
+        private void Ligado_CheckedChanged(object sender, EventArgs e) {
+            if (Ligado.Checked == true) {
+                Motoca.MarchaAtual = int.Parse(menorMarchaDaMoto.Text);
+                MessageBox.Show("A " + nomeDaMotoca.Text + " está ligada!");
+            }
         }
 
         private void Desligado_CheckedChanged(object sender, EventArgs e) {
@@ -68,29 +96,24 @@ namespace SistemaMoto {
             }
         }
 
-        private void Ligado_CheckedChanged(object sender, EventArgs e) {
-                if (Ligado.Checked == true) {
-                    MessageBox.Show("A " + nomeDaMotoca.Text + " está ligada!");
-                }                  
-        }
-
         private void button1_Click(object sender, EventArgs e) {
 
-            if (Ligado.Checked == true) {              
+            if (Ligado.Checked == true) {
                 if (marchaDaMotoca.Text == maiorMarchaDaMotoca.Text) {
                     MessageBox.Show("Está na marcha mais alta");
 
                 }
 
                 else {
+
                     Motoca.marchaAcima();
                     marchaDaMotoca.Text = Convert.ToString(Motoca.MarchaAtual);
                 }
             }
             else {
-                MessageBox.Show("Ligue a "+nomeDaMotoca.Text);
+                MessageBox.Show("Ligue a " + nomeDaMotoca.Text);
             }
-           
+
         }
 
         private void button2_Click(object sender, EventArgs e) {
@@ -209,7 +232,7 @@ namespace SistemaMoto {
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) {
 
         }
- 
+
 
         private void criarNovaMotoToolStripMenuItem_Click_1(object sender, EventArgs e) {
             nomeDaMotoca.Text = " ";
@@ -231,6 +254,20 @@ namespace SistemaMoto {
             Desligado.Checked = false;
             marchaMais.Enabled = false;
             marchaMenos.Enabled = false;
+        }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e) {
+
+
+            Sobre Sobre = new Sobre();
+            Sobre.ShowDialog();
+
+
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e) {
+
         }
     }
 }

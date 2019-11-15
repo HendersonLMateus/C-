@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace SistemaMoto {
     class Moto {
 
@@ -22,9 +23,9 @@ namespace SistemaMoto {
         public Moto(string marca, string modelo, string cor, int menormarcha,int maiormarcha ) {
             Marca = marca;
             Modelo = modelo;
-            Cor = cor;
-            MarchaAtual = 0;
+            Cor = cor;          
             menorMarcha = menormarcha;
+            MarchaAtual = menormarcha;
             maiorMarcha = maiormarcha;
             
         }
@@ -40,8 +41,8 @@ namespace SistemaMoto {
         }
         public void marchaAcima() { 
 
-            MarchaAtual += 1;
-           
+            MarchaAtual = MarchaAtual + 1;
+
         }
         public void marchaAbaixo() {
             MarchaAtual -= 1;
